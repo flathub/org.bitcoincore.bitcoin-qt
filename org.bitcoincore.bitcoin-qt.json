@@ -1,93 +1,82 @@
 {
-    "id": "org.bitcoincore.bitcoin-qt",
-    "runtime": "org.freedesktop.Platform",
-    "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "19.08",
-    "command": "bitcoin-qt",
-    "finish-args": [
-	/* Wayland and Xorg support */
-	"--socket=x11",
-	"--socket=wayland",
-	/* Sound */
-	"--socket=pulseaudio",
-	/* OpenGL access. */
-	"--device=dri",
-	/* IPC access. */
-	"--share=ipc",
-	/* Network acess. */
-	"--share=network"
-    ],
-    "modules": [
-	{
-	    "name": "bitcoin-core",
-	    "buildsystem": "simple",
-	    "build-commands": [
-		"install -m 0744 -D -t /app/bin/internal bin/bitcoind",
-		"install -m 0744 -D -t /app/bin/internal bin/bitcoin-qt",
-		"install -m 0744 -D -t /app/bin/internal bin/bitcoin-cli",
-		"install -m 0744 -D -t /app/bin/internal bin/test_bitcoin"
-	    ],
-	    "post-install": [
-		"/app/bin/internal/test_bitcoin"
-	    ],
-	    "sources": [
-		{
-		    "type": "archive",
-		    "only-arches": ["x86_64"],
-		    "url": "https://bitcoincore.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-x86_64-linux-gnu.tar.gz",
-		    "sha256": "600d1db5e751fa85903e935a01a74f5cc57e1e7473c15fd3e17ed21e202cfe5a"
-		},
-		{
-		    "type": "archive",
-		    "only-arches": ["i386"],
-		    "url": "https://bitcoincore.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-i686-pc-linux-gnu.tar.gz",
-		    "sha256": "989e847b3e95fc9fedc0b109cae1b4fa43348f2f712e187a118461876af9bd16"
-		},
-		{
-		    "type": "archive",
-		    "only-arches": ["arm"],
-		    "url": "https://bitcoincore.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-arm-linux-gnueabihf.tar.gz",
-		    "sha256": "cc7d483e4b20c5dabd4dcaf304965214cf4934bcc029ca99cbc9af00d3771a1f"
-		},
-		{
-		    "type": "archive",
-		    "only-arches": ["aarch64"],
-		    "url": "https://bitcoincore.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-aarch64-linux-gnu.tar.gz",
-		    "sha256": "88f343af72803b851c7da13874cc5525026b0b55e63e1b5e1298390c4688adc6"
-		}
-
-	    ]
-	},
-	{
-	    "name": "misc",
-	    "buildsystem": "simple",
-	    "build-commands": [
-		"install -Dp -m 644 org.bitcoincore.bitcoin-qt.desktop /app/share/applications/org.bitcoincore.bitcoin-qt.desktop",
-		"install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
-		"install -Dp -m 644 org.bitcoincore.bitcoin-qt.appdata.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.appdata.xml",
-		"bash install_wrappers.sh"
-
-	    ],
-	    "sources": [
-		{
-		    "type": "file",
-		    "path": "org.bitcoincore.bitcoin-qt.desktop"
-		},
-		{
-		    "type": "file",
-		    "path": "org.bitcoincore.bitcoin-qt.appdata.xml"
-		},
-		{
-		    "type": "file",
-		    "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.18.1/src/qt/res/src/bitcoin.svg",
-		    "sha256": "86cdf6d03ddd38ca949e8d8e3f34bbc87abed12baf48bf090ce9e5b2339b3542"
-		},
-		{
-		    "type": "file",
-		    "path": "install_wrappers.sh"
-		}
-
-	    ]
-	}
-    ]
+  "id": "org.bitcoincore.bitcoin-qt",
+  "runtime": "org.freedesktop.Platform",
+  "sdk": "org.freedesktop.Sdk",
+  "runtime-version": "19.08",
+  "command": "bitcoin-qt",
+  "finish-args": [
+    /* Wayland and Xorg support */
+    "--socket=x11",
+    "--socket=wayland",
+    /* Sound */
+    "--socket=pulseaudio",
+    /* OpenGL access. */
+    "--device=dri",
+    /* IPC access. */
+    "--share=ipc",
+    /* Network acess. */
+    "--share=network"
+  ],
+  "modules": [
+    {
+      "name": "bitcoin-core",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -m 0744 -D -t /app/bin/internal bin/bitcoind",
+        "install -m 0744 -D -t /app/bin/internal bin/bitcoin-qt",
+        "install -m 0744 -D -t /app/bin/internal bin/bitcoin-cli",
+        "install -m 0744 -D -t /app/bin/internal bin/test_bitcoin"
+      ],
+      "post-install": ["/app/bin/internal/test_bitcoin"],
+      "sources": [
+        {
+          "type": "archive",
+          "only-arches": ["x86_64"],
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-x86_64-linux-gnu.tar.gz",
+          "sha256": "732cc96ae2e5e25603edf76b8c8af976fe518dd925f7e674710c6c8ee5189204"
+        },
+        {
+          "type": "archive",
+          "only-arches": ["arm"],
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-arm-linux-gnueabihf.tar.gz",
+          "sha256": "c9335ab5286b66b3fd93be5cd21695885765cb2ffea2a90d92bf99b43f549787"
+        },
+        {
+          "type": "archive",
+          "only-arches": ["aarch64"],
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-aarch64-linux-gnu.tar.gz",
+          "sha256": "c258c6416225afb08c4396847eb3d5da61a124f1b5c61cccb5a2e903e453ce7f"
+        }
+      ]
+    },
+    {
+      "name": "misc",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dp -m 644 org.bitcoincore.bitcoin-qt.desktop /app/share/applications/org.bitcoincore.bitcoin-qt.desktop",
+        "install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
+        "install -Dp -m 644 org.bitcoincore.bitcoin-qt.appdata.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.appdata.xml",
+        "bash install_wrappers.sh"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "org.bitcoincore.bitcoin-qt.desktop"
+        },
+        {
+          "type": "file",
+          "path": "org.bitcoincore.bitcoin-qt.appdata.xml"
+        },
+        {
+          "type": "file",
+          "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.18.1/src/qt/res/src/bitcoin.svg",
+          "sha256": "86cdf6d03ddd38ca949e8d8e3f34bbc87abed12baf48bf090ce9e5b2339b3542"
+        },
+        {
+          "type": "file",
+          "path": "install_wrappers.sh"
+        }
+      ]
+    }
+  ]
 }
