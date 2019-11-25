@@ -37,12 +37,6 @@
         },
         {
           "type": "archive",
-          "only-arches": ["i386"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-i686-pc-linux-gnu.tar.gz",
-          "sha256": "94d1b581dfd21dc64e5510c3b31d6592aed9d33851db5795fb549354f00b3e72"
-        },
-        {
-          "type": "archive",
           "only-arches": ["arm"],
           "url": "https://bitcoincore.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-arm-linux-gnueabihf.tar.gz",
           "sha256": "c9335ab5286b66b3fd93be5cd21695885765cb2ffea2a90d92bf99b43f549787"
