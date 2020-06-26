@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-
   <id>org.bitcoincore.bitcoin-qt</id>
   <name>Bitcoin Core</name>
   <project_license>MIT</project_license>
   <metadata_license>CC0-1.0</metadata_license>
-
   <summary>
     Connect to the Bitcoin P2P network
   </summary>
-
   <url type="homepage">
     https://bitcoincore.org/
   </url>
   <url type="bugtracker">
     https://github.com/bitcoin/bitcoin/issues/new?title=[flatpak]
   </url>
-
   <launchable type="desktop-id">
     org.bitcoincore.bitcoin-qt.desktop
   </launchable>
-
   <description>
     <p>
     Bitcoin is an experimental digital currency that enables instant
@@ -31,7 +26,6 @@
     source software which enables the use of this currency.
     </p>
   </description>
-
   <screenshots>
     <screenshot>
       <image type="source">
@@ -39,15 +33,14 @@
       </image>
     </screenshot>
   </screenshots>
-
   <releases>
-    <release version="0.20.0" date="2020-06-03"/>
-    <release version="0.19.1" date="2020-01-09"/>
-    <release version="0.19.0.1" date="2019-11-24"/>
-    <release version="0.18.1" date="2019-08-09"/>
-    <release version="0.18.0" date="2019-05-18"/>
+    <release date="2020-06-03" version="0.20.0"/>
+    <release date="2020-01-09" version="0.19.1"/>
+    <release date="2019-11-24" version="0.19.0.1"/>
+    <release date="2019-08-09" version="0.18.1"/>
+    <release date="2019-05-18" version="0.18.0"/>
   </releases>
-
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
+  <developer_name>Bitcoin Core</developer_name>
 
 </component>
