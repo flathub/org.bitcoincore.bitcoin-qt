@@ -15,7 +15,10 @@
     /* IPC access. */
     "--share=ipc",
     /* Network acess. */
-    "--share=network"
+    "--share=network",
+    /* Tor auth cookie */
+    "--filesystem=/run/tor/control.authcookie:ro",
+    "--filesystem=/var/run/tor/control.authcookie:ro"
   ],
   "modules": [
     {
