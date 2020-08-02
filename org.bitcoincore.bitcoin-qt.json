@@ -32,20 +32,20 @@
         {
           "type": "archive",
           "only-arches": ["x86_64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.0/bitcoin-0.20.0-x86_64-linux-gnu.tar.gz",
-          "sha256": "35ec10f87b6bc1e44fd9cd1157e5dfa483eaf14d7d9a9c274774539e7824c427"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.1/bitcoin-0.20.1-x86_64-linux-gnu.tar.gz",
+          "sha256": "376194f06596ecfa40331167c39bc70c355f960280bd2a645fdbf18f66527397"
         },
         {
           "type": "archive",
           "only-arches": ["arm"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.0/bitcoin-0.20.0-arm-linux-gnueabihf.tar.gz",
-          "sha256": "05014c7ff00f4496b1f389f0961d807e04505d8721d5c6f69567f2a0ec1985cc"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.1/bitcoin-0.20.1-arm-linux-gnueabihf.tar.gz",
+          "sha256": "55b577e0fb306fb429d4be6c9316607753e8543e5946b542d75d876a2f08654c"
         },
         {
           "type": "archive",
           "only-arches": ["aarch64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.0/bitcoin-0.20.0-aarch64-linux-gnu.tar.gz",
-          "sha256": "081b30b0f1af95656242c83eef30bbf7216b1a30fa8e8f29b3b160fe520d28f6"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-0.20.1/bitcoin-0.20.1-aarch64-linux-gnu.tar.gz",
+          "sha256": "60c93e3462c303eb080be7cf623f1a7684b37fd47a018ad3848bc23e13c84e1c"
         }
       ]
     },
@@ -69,7 +69,7 @@
         },
         {
           "type": "file",
-          "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.20.0/src/qt/res/src/bitcoin.svg",
+          "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.20.1/src/qt/res/src/bitcoin.svg",
           "sha256": "86cdf6d03ddd38ca949e8d8e3f34bbc87abed12baf48bf090ce9e5b2339b3542"
         },
         {
