@@ -2,12 +2,11 @@
   "id": "org.bitcoincore.bitcoin-qt",
   "runtime": "org.freedesktop.Platform",
   "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "19.08",
+  "runtime-version": "20.08",
   "command": "bitcoin-qt",
   "finish-args": [
-    /* Wayland and Xorg support */
+    /* Xorg support */
     "--socket=x11",
-    "--socket=wayland",
     /* Sound */
     "--socket=pulseaudio",
     /* OpenGL access. */
