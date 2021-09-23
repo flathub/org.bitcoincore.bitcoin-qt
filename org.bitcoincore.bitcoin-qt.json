@@ -2,7 +2,7 @@
   "id": "org.bitcoincore.bitcoin-qt",
   "runtime": "org.freedesktop.Platform",
   "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "20.08",
+  "runtime-version": "21.08",
   "command": "bitcoin-qt",
   "finish-args": [
     /* Xorg support */
@@ -34,20 +34,20 @@
         {
           "type": "archive",
           "only-arches": ["x86_64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-x86_64-linux-gnu.tar.gz",
-          "sha256": "366eb44a7a0aa5bd342deea215ec19a184a11f2ca22220304ebb20b9c8917e2b"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz",
+          "sha256": "59ebd25dd82a51638b7a6bb914586201e67db67b919b2a1ff08925a7936d1b16"
         },
         {
           "type": "archive",
           "only-arches": ["arm"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-arm-linux-gnueabihf.tar.gz",
-          "sha256": "3a92e312ffd3ca92579d46ec52e3dcb1b09bbdd11fe7c6a735e8546c7d9975e0"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-arm-linux-gnueabihf.tar.gz",
+          "sha256": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-arm-linux-gnueabihf.tar.gz"
         },
         {
           "type": "archive",
           "only-arches": ["aarch64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-aarch64-linux-gnu.tar.gz",
-          "sha256": "28264751c982d30b9330e6c1475ddb9ed28be6a2601e8a5f33b6ba49a3d9f5f2"
+          "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-aarch64-linux-gnu.tar.gz",
+          "sha256": "ac718fed08570a81b3587587872ad85a25173afa5f9fbbd0c03ba4d1714cfa3e"
         }
       ]
     },
