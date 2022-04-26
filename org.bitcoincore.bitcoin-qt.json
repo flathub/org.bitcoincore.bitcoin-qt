@@ -1,90 +1,90 @@
 {
-  "id": "org.bitcoincore.bitcoin-qt",
-  "runtime": "org.freedesktop.Platform",
-  "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "21.08",
-  "command": "bitcoin-qt",
-  "finish-args": [
-    /* Xorg support */
-    "--socket=x11",
-    /* Sound */
-    "--socket=pulseaudio",
-    /* OpenGL access. */
-    "--device=dri",
-    /* IPC access. */
-    "--share=ipc",
-    /* Network acess. */
-    "--share=network",
-    /* Tor auth cookie */
-    "--filesystem=/run/tor/control.authcookie:ro",
-    "--filesystem=/var/run/tor/control.authcookie:ro"
-  ],
-  "modules": [
-    {
-      "name": "bitcoin-core",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -m 0744 -D -t /app/bin/internal bin/bitcoind",
-        "install -m 0744 -D -t /app/bin/internal bin/bitcoin-qt",
-        "install -m 0744 -D -t /app/bin/internal bin/bitcoin-cli",
-        "install -m 0744 -D -t /app/bin/internal bin/test_bitcoin"
-      ],
-      "post-install": ["/app/bin/internal/test_bitcoin"],
-      "sources": [
+    "id": "org.bitcoincore.bitcoin-qt",
+    "runtime": "org.freedesktop.Platform",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "21.08",
+    "command": "bitcoin-qt",
+    "finish-args": [
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--filesystem=/run/tor/control.authcookie:ro",
+        "--filesystem=/var/run/tor/control.authcookie:ro"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "only-arches": ["x86_64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz",
-          "sha256": "59ebd25dd82a51638b7a6bb914586201e67db67b919b2a1ff08925a7936d1b16",
-          "x-checker-data": {
-            "type": "html",
-            "url": "https://bitcoincore.org/en/releasesrss.xml",
-            "version-pattern": "<title>Bitcoin Core ([\\d\\.]+)</title>",
-            "url-template": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-x86_64-linux-gnu.tar.gz"
-          }
+            "name": "bitcoin-core",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -m 0744 -D -t /app/bin/internal bin/bitcoind",
+                "install -m 0744 -D -t /app/bin/internal bin/bitcoin-qt",
+                "install -m 0744 -D -t /app/bin/internal bin/bitcoin-cli",
+                "install -m 0744 -D -t /app/bin/internal bin/test_bitcoin"
+            ],
+            "post-install": [
+                "/app/bin/internal/test_bitcoin"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-x86_64-linux-gnu.tar.gz",
+                    "sha256": "2cca490c1f2842884a3c5b0606f179f9f937177da4eadd628e3f7fd7e25d26d0",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://bitcoincore.org/en/releasesrss.xml",
+                        "version-pattern": "<title>Bitcoin Core ([\\d\\.]+)</title>",
+                        "url-template": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-x86_64-linux-gnu.tar.gz"
+                    }
+                },
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "aarch64"
+                    ],
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-aarch64-linux-gnu.tar.gz",
+                    "sha256": "06f4c78271a77752ba5990d60d81b1751507f77efda1e5981b4e92fd4d9969fb",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://bitcoincore.org/en/releasesrss.xml",
+                        "version-pattern": "<title>Bitcoin Core ([\\d\\.]+)</title>",
+                        "url-template": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-aarch64-linux-gnu.tar.gz"
+                    }
+                }
+            ]
         },
         {
-          "type": "archive",
-          "only-arches": ["aarch64"],
-          "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-aarch64-linux-gnu.tar.gz",
-          "sha256": "ac718fed08570a81b3587587872ad85a25173afa5f9fbbd0c03ba4d1714cfa3e",
-          "x-checker-data": {
-            "type": "html",
-            "url": "https://bitcoincore.org/en/releasesrss.xml",
-            "version-pattern": "<title>Bitcoin Core ([\\d\\.]+)</title>",
-            "url-template": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-aarch64-linux-gnu.tar.gz"
-          }
+            "name": "misc",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dp -m 644 org.bitcoincore.bitcoin-qt.desktop /app/share/applications/org.bitcoincore.bitcoin-qt.desktop",
+                "install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
+                "install -Dp -m 644 org.bitcoincore.bitcoin-qt.metainfo.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.metainfo.xml",
+                "bash install_wrappers.sh"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "org.bitcoincore.bitcoin-qt.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "org.bitcoincore.bitcoin-qt.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.21.1/src/qt/res/src/bitcoin.svg",
+                    "sha256": "86cdf6d03ddd38ca949e8d8e3f34bbc87abed12baf48bf090ce9e5b2339b3542"
+                },
+                {
+                    "type": "file",
+                    "path": "install_wrappers.sh"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "misc",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dp -m 644 org.bitcoincore.bitcoin-qt.desktop /app/share/applications/org.bitcoincore.bitcoin-qt.desktop",
-        "install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
-        "install -Dp -m 644 org.bitcoincore.bitcoin-qt.metainfo.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.metainfo.xml",
-        "bash install_wrappers.sh"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "path": "org.bitcoincore.bitcoin-qt.desktop"
-        },
-        {
-          "type": "file",
-          "path": "org.bitcoincore.bitcoin-qt.metainfo.xml"
-        },
-        {
-          "type": "file",
-          "url": "https://raw.githubusercontent.com/bitcoin/bitcoin/v0.21.1/src/qt/res/src/bitcoin.svg",
-          "sha256": "86cdf6d03ddd38ca949e8d8e3f34bbc87abed12baf48bf090ce9e5b2339b3542"
-        },
-        {
-          "type": "file",
-          "path": "install_wrappers.sh"
-        }
-      ]
-    }
-  ]
+    ]
 }
