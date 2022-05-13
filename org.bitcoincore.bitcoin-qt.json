@@ -61,7 +61,8 @@
             "name": "misc",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dp -m 644 org.bitcoincore.bitcoin-qt.desktop /app/share/applications/org.bitcoincore.bitcoin-qt.desktop",
+                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} bitcoin-qt.desktop",
+                "install -Dp -m 644 bitcoin-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
                 "install -Dp -m 644 org.bitcoincore.bitcoin-qt.metainfo.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.metainfo.xml",
                 "bash install_wrappers.sh"
@@ -69,7 +70,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "path": "org.bitcoincore.bitcoin-qt.desktop"
+                    "url": "https://raw.githubusercontent.com/bitcoin-core/packaging/23.x/debian/bitcoin-qt.desktop",
+                    "sha256": "0a46bbadda140599e807be38999e6848c89f9c3523d26fede02d34d62d50f632"
                 },
                 {
                     "type": "file",
