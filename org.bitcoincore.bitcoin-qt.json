@@ -32,8 +32,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://bitcoincore.org/bin/bitcoin-core-24.0/bitcoin-24.0-x86_64-linux-gnu.tar.gz",
-                    "sha256": "fb86cf6af7a10bc5f3ae6cd6a5b0348854e1462102fe71e755d30b51b6e317d1",
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-x86_64-linux-gnu.tar.gz",
+                    "sha256": "2cca490c1f2842884a3c5b0606f179f9f937177da4eadd628e3f7fd7e25d26d0",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
@@ -46,8 +46,8 @@
                     "only-arches": [
                         "aarch64"
                     ],
-                    "url": "https://bitcoincore.org/bin/bitcoin-core-24.0/bitcoin-24.0-aarch64-linux-gnu.tar.gz",
-                    "sha256": "904e103f08f776d03935118568411724f9e070e0e888e52c9e5692308fa47d49",
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0-aarch64-linux-gnu.tar.gz",
+                    "sha256": "06f4c78271a77752ba5990d60d81b1751507f77efda1e5981b4e92fd4d9969fb",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
