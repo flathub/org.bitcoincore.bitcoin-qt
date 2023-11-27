@@ -10,8 +10,7 @@
         "--device=dri",
         "--share=ipc",
         "--share=network",
-        "--filesystem=/run/tor/control.authcookie:ro",
-        "--filesystem=/var/run/tor/control.authcookie:ro"
+        "--filesystem=/run/tor/control.authcookie:ro"
     ],
     "modules": [
         {
