@@ -49,5 +49,8 @@
   </releases>
   <content_rating type="oars-1.1"/>
   <developer_name>Bitcoin Core</developer_name>
+  <developer id="org.bitcoincore">
+    <name>Bitcoin Core</name>
+  </developer>
 
 </component>
