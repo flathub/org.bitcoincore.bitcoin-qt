@@ -24,7 +24,7 @@
     </p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image type="source">
         https://user-images.githubusercontent.com/6399679/62743657-2fc28b80-ba11-11e9-9bbf-d3ad0d17abb0.png
       </image>
@@ -49,5 +49,8 @@
   </releases>
   <content_rating type="oars-1.1"/>
   <developer_name>Bitcoin Core</developer_name>
+  <developer id="org.bitcoincore">
+    <name>Bitcoin Core</name>
+  </developer>
 
 </component>
