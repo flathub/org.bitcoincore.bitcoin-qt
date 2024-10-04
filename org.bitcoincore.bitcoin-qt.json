@@ -37,6 +37,7 @@
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
                         "version-pattern": "<title>Bitcoin Core ([\\d\\.]+)</title>",
+                        "is-main-source": true,
                         "url-template": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-x86_64-linux-gnu.tar.gz"
                     }
                 },
