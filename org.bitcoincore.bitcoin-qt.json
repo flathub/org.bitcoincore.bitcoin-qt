@@ -31,8 +31,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://bitcoincore.org/bin/bitcoin-core-28.0/bitcoin-28.0-x86_64-linux-gnu.tar.gz",
-                    "sha256": "7fe294b02b25b51acb8e8e0a0eb5af6bbafa7cd0c5b0e5fcbb61263104a82fbc",
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-28.1/bitcoin-28.1-x86_64-linux-gnu.tar.gz",
+                    "sha256": "07f77afd326639145b9ba9562912b2ad2ccec47b8a305bd075b4f4cb127b7ed7",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
@@ -46,8 +46,8 @@
                     "only-arches": [
                         "aarch64"
                     ],
-                    "url": "https://bitcoincore.org/bin/bitcoin-core-28.0/bitcoin-28.0-aarch64-linux-gnu.tar.gz",
-                    "sha256": "7fa582d99a25c354d23e371a5848bd9e6a79702870f9cbbf1292b86e647d0f4e",
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-28.1/bitcoin-28.1-aarch64-linux-gnu.tar.gz",
+                    "sha256": "6ddb6990690bd4c9a9f4319ed6f6e9c995c85ce5530ee9f120e80ce09e090c44",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
