@@ -46,8 +46,8 @@
                     "only-arches": [
                         "aarch64"
                     ],
-                    "url": "https://bitcoincore.org/bin/bitcoin-core-29.1/bitcoin-29.1-aarch64-linux-gnu.tar.gz",
-                    "sha256": "d6be913e1abc5effe57f50630b4bff2f89b38c092182c47f1fcde0ae12afc71c",
+                    "url": "https://bitcoincore.org/bin/bitcoin-core-30.0/bitcoin-30.0-aarch64-linux-gnu.tar.gz",
+                    "sha256": "785f49061ae65fcf31b8323803bbaa284569dc65e7aba68229e2da222a449635",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://bitcoincore.org/en/releasesrss.xml",
