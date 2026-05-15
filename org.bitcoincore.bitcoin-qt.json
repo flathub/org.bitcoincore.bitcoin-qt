@@ -61,7 +61,7 @@
             "name": "misc",
             "buildsystem": "simple",
             "build-commands": [
-                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} bitcoin-qt.desktop",
+                "desktop-file-edit --set-icon=${FLATPAK_ID} bitcoin-qt.desktop",
                 "install -Dp -m 644 bitcoin-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dp -m 644 bitcoin.svg /app/share/icons/hicolor/scalable/apps/org.bitcoincore.bitcoin-qt.svg",
                 "install -Dp -m 644 org.bitcoincore.bitcoin-qt.metainfo.xml /app/share/metainfo/org.bitcoincore.bitcoin-qt.metainfo.xml",
